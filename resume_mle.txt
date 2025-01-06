@@ -1,0 +1,152 @@
+\documentclass[11pt,letterpaper]{article}
+\usepackage[letterpaper,margin=0.5in]{geometry}
+\usepackage[utf8]{inputenc}
+\usepackage{mdwlist}
+\usepackage[default]{lato}
+\usepackage[T1]{fontenc}
+\usepackage{textcomp}
+\usepackage{fontawesome}
+\usepackage{enumitem}
+\DeclareFontFamily{U}{fontawesomeOne}{}
+\DeclareFontShape{U}{fontawesomeOne}{m}{n}
+{<-> FontAwesome--fontawesomeone}{}
+\DeclareRobustCommand\FAone{\fontencoding{U}\fontfamily{fontawesomeOne}\selectfont}
+\pagestyle{empty}
+\setlength{\tabcolsep}{0em}
+
+% indentsection style, used for sections that aren't already in lists
+% that need indentation to the level of all text in the document
+\newenvironment{indentsection}[1]%
+{\begin{list}{}%
+{\setlength{\leftmargin}{#1}}%
+     \item[]
+}
+{\end{list}}
+
+% opposite of above; bump a section back toward the left margin
+\newenvironment{unindentsection}[1]%
+{\begin{list}{}%
+{\setlength{\leftmargin}{-0.5#1}}%
+\item[]%
+}
+{\end{list}}
+
+% format two pieces of text, one left aligned and one right aligned
+\newcommand{\headerrow}[2]
+{\begin{tabular*}{\linewidth}{l@{\extracolsep{\fill}}r}
+#1 &
+#2 \\
+\end{tabular*}}
+
+% make "C++" look pretty when used in text by touching up the plus signs
+\newcommand{\CPP}
+{C\nolinebreak[4]\hspace{-.05em}\raisebox{.22ex}{\footnotesize\bf ++}}
+
+% and the actual content starts here
+\begin{document}
+
+\begin{center}
+	{\LARGE \textbf{Michal Gorski}}\\ 	Katowice Metropolitan Area 	\vspace{0.05cm} 	\\ 	\raisebox{-0.2\height} {\Large \faPhoneSquare} \ \  (+48) 792 528 474 \hfill\raisebox{-0.2\height}{\Large \faEnvelopeSquare} gorskitech.ai@gmail.com \hfill \raisebox{-0.2\height}{\Large \faGithubSquare} MikeG27 \hfill \raisebox{-0.2\height}{\Large \faLinkedinSquare} linkedin.com/in/gorskitechai
+\end{center}
+
+\hrule
+\vspace{-1em}
+\subsection*{\Large Experience}
+
+\renewcommand\labelitemi{}
+\renewcommand\labelitemii{$\bullet$}
+\begin{itemize}[leftmargin=1em]
+	\parskip=0.1em
+		
+		
+	\item
+	      \headerrow
+	      {\textbf{Spyrosoft}}
+	      {\textbf{Wrocław, Woj. Dolnośląskie, Poland}}
+	      \headerrow
+	      {\emph{AI/ML Engineer}}
+	      {\emph{April 2024 -- Present}}
+	      \begin{itemize*}
+	      \item Developed a Large Language Model (LLM) solution for documentation processing, improving efficiency and accessibility of information for healthcare professionals.
+	      \item Designed and implemented a fully managed machine learning product in the cloud for documentation generation, utilising an LLM solution to enhance accuracy and automation.
+	      \item Implemented MLOps practices to ensure robust model deployment, monitoring, and retraining.
+	      \end{itemize*}
+	      
+	\item
+	      \headerrow
+	      {\textbf{Accenture}}
+	      {\textbf{Warszawa, Woj. Mazowieckie, Poland}}
+	      \headerrow
+	      {\emph{Senior Machine Learning Engineer - Consultant}}
+	      {\emph{October 2022 -- April 2024}}
+	      \begin{itemize*}
+	      \item Led the deployment of machine learning models to AWS, ensuring high availability and scalability.
+	      \item Managed a complex array of experiments using MLFlow, optimizing model performance and reliability.
+	      \item Integrated MLOps capabilities into existing pipelines with Alibi Detect, enhancing pipeline efficiency.
+	      \item Directed the construction of robust data pipelines, facilitating smoother model training processes.
+	      \item Automated essential Data Science team workflows, significantly improving operational efficiency.
+	      \item Maintained comprehensive technical documentation, ensuring project clarity and consistency.
+	      \end{itemize*}
+	      
+	\item
+	      \headerrow
+	      {\textbf{ING Polska}}
+	      {\textbf{Katowice Metropolitan Area, Poland}}
+	      \headerrow
+	      {\emph{Machine Learning Engineer}}
+	      {\emph{March 2019 -- October 2022}}
+	      \begin{itemize*}
+	      \item Developed an innovative behavioral client profiling system, significantly improving customer segmentation.
+	      \item Pioneered the CFO department's inaugural end-to-end Machine Learning product, improving financial forecasting.
+	      \item Maintained and optimized a time-series forecasting and anomaly detection solution, contributing to reliable financial data analysis.
+	      \item Trained complex Machine Learning models in distributed computing environments, efficiently handling large datasets.
+	      \end{itemize*}
+	      
+	\item
+	      \headerrow
+	      {\textbf{Whiteaster}}
+	      {\textbf{Katowice Metropolitan Area, Poland}}
+	      \headerrow
+	      {\emph{Machine Learning Engineer}}
+	      {\emph{November 2018 -- December 2019}}
+	      \begin{itemize*}
+	      \item Developed a user-verification solution based on real-time image data.
+	      \item Used transfer learning and fine-tuning for age estimation models.
+	      \item Optimized CNN inference latency for IoT devices.
+	      \item Improved model accuracy through external data sources.
+	      \item Developed time-series forecasting and anomaly detection solutions for electricity power consumption.
+	      \end{itemize*}
+
+\end{itemize}
+
+\hrule
+\vspace{-1em}
+\subsection*{\Large Skills}
+
+\hyphenpenalty=1000
+\begin{itemize}[leftmargin=1em,noitemsep]
+	\item \textbf{Languages:} English (Professional), Polish (Native) 
+	\item \textbf{AI/ML Tools:} python, pandas, numpy, scikit-learn, langchain, huggingface, pyspark
+        \item \textbf{MLOps Tools:} docker, mlflow, alibi detect, airflow, kestra
+        \item \textbf{Cloud experience:} azure, aws 
+	\item \textbf{Certifications:}  AWS Certified Cloud Practitioner
+\end{itemize}
+
+\hrule
+\vspace{-1em}
+\subsection*{\Large Education}
+
+\begin{itemize}[leftmargin=1em]
+	\parskip=0.1em
+	
+	\item
+	      \headerrow
+	      {\textbf{Politechnika Opolska}}
+	      {\textbf{Opole, Polska}}
+	      \headerrow
+	      {\emph{M.S. Control Engineering and Robotics}}
+	      {\emph{2013 -- 2018}}
+
+\end{itemize}
+
+\end{document}
